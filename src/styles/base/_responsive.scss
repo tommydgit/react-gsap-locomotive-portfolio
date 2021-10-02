@@ -1,0 +1,132 @@
+$h2size: 7rem;
+$h3size: 4rem;
+
+@media (min-width: $min576) {
+
+  .work {
+    .work-img{
+      width: 90vw;
+      height: 50vw;
+    }
+    .site-link{
+      font-size: 1rem;
+    }
+      .title-wrap {
+
+        .title{
+          font-size: 8vw;
+        }
+      }
+    }
+}
+
+@media (min-width: $min768) {
+
+  .section-title{
+    font-size: $h2size;
+
+    &.stroke{
+      -webkit-text-stroke-width: 2px;
+
+      .reveal-wrap span{
+        left: 2px;
+      }
+    }
+  }
+
+  .work .title-wrap .title {
+    font-size: $h3size;
+  }
+
+  .work:hover .title {
+    text-shadow: 0 0 12px #fff;
+  }
+
+  #contact_section .contact a {
+    font-size: 2em;
+  }
+
+  #contact_section .footer .social ul li {
+    display: inline-block;
+    padding: 0 25px;
+    margin: 10px 0 13px;
+  }
+
+}
+
+@media (min-width: $min992) {
+  $container_spacing_hor: 100px;
+  $container_spacing_ver: 100px;
+
+  .hero-title{
+    margin-top: 0;
+  }
+
+  .section {
+    padding: $container_spacing_ver 0;
+  }
+
+  .container{
+    padding: 0 $container_spacing_hor;
+  }
+
+  .section-title{
+    font-size: $h2size;
+    padding-bottom: $container_spacing_ver;
+  }
+
+  #work_section .section-title{
+    top: $container_spacing_ver / 2;
+    left: $container_spacing_hor;
+  }
+
+  .work .work-img{
+    z-index: -1;
+  }
+
+  .work .title-wrap .title{
+    pointer-events: all;
+    cursor: pointer;
+    cursor: url("data:image/svg+xml;utf8,<svg width='80px' height='80px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'><path fill='white' d='M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z'/></svg>") 40 40, auto;
+  }
+
+  .work .work-item .site-link{
+    display: none;
+  }
+
+  #contact_section .footer{
+    margin: 20vh 0 0 0;
+  }
+
+  #contact_section{
+    padding-bottom: 30px;
+  }
+
+  .line-logo{
+    width: 200px;
+    position: absolute;
+    right: $container_spacing_hor / 2;
+    bottom: $container_spacing_hor / 2;
+  }
+}
+
+@media (min-width: $min1200) {
+  $h2size: 9rem;
+  $h3size: 5rem;
+
+  .section-title {
+    font-size: $h2size;
+  }
+
+  .work .title-wrap .title {
+    font-size: $h3size;
+  }
+}
+
+@media (min-width: $min1400) {
+  $h2size: 11rem;
+
+  .section-title{
+    font-size: $h2size;
+  }
+}

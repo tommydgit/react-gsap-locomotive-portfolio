@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'GT-Walsheim Regular';
+  src: url('../assets/fonts/GT-Walsheim-Regular.woff2'), url('../assets/fonts/GT-Walsheim-Regular.woff');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT-Walsheim Bold';
+  src: url('../assets/fonts/GT-Walsheim-Bold.woff2'), url('../assets/fonts/GT-Walsheim-Bold.woff');
+  font-weight: 700;
+  font-display: swap;
+}
+html{
+  background: $aqua;
+}
+
+body{
+  font-family: 'GT-Walsheim Regular', sans-serif;
+  color: $dark;
+  z-index: -3;
+}
+
+#scroll{
+  overflow-y: hidden !important;
+  overflow-x: hidden;
+}
+
+.c-scrollbar_thumb{
+  background-color: $dark;
+}
+
+#lavalamp{
+  position:fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: -2;
+  filter: brightness(4) hue-rotate(-45deg) sepia(0.5);
+  opacity: 1;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: $dark;
+  transition: $transitionfast;
+  z-index: 1000;
+  display: none;
+}
+
+.loader--hide {
+  transform: translateY(-100%);
+}
+
+h1, h2, h3{
+  font-family: 'GT-Walsheim Bold', sans-serif;
+  line-height: 0.83em;
+  letter-spacing: -0.07em;
+
+}
+
+h1{
+  font-size: $h1size;
+}
+
+h2{
+  font-size: $h2size;
+}
+
+
+.flex{
+  display: flex;
+}
+
+.w-full {
+  width: 100vw;
+}
+
+.section {
+  min-height: 100vh;
+  position: relative;
+  padding: $container_spacing_ver 0;
+  transition: $transition;
+
+  &.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.container{
+  padding: 0 $container_spacing_hor;
+  width: 100%;
+}
+
+.hero-title{
+  font-family: 'GT-Walsheim Regular', sans-serif;
+  color: $dark;
+  text-transform: uppercase;
+  font-size: 12.8vw;
+  word-break: normal;
+  text-align: left;
+  margin-top: -120px;
+  margin-left: 0;
+}
+
+.reveal-wrap{
+  overflow:hidden;
+  position: relative;
+  span{
+    position: absolute;
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+  }
+}
+
+.section-title{
+  font-size: $h2size;
+  padding-bottom: $container_spacing_ver;
+
+  &.stroke{
+    letter-spacing: -0.03em;
+    -webkit-text-stroke: .01em $dark;
+    -webkit-text-fill-color: transparent;
+
+    .reveal-wrap span{
+      left: 1px;
+    }
+  }
+}
+
+.hero-title .reveal-wrap{
+  height: 10vw;
+}
+
+h2 .reveal-wrap{
+  height: .8em;
+}
+
+.line-logo{
+  width: 130px;
+  position: absolute;
+  right: $container_spacing_hor;
+  bottom: $container_spacing_hor + 120px ;
+}
+
+#circle_logo_text{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cls-1,.cls-3{fill:none}
+.cls-2{clip-path:url(#clip-path)}
+.cls-3{stroke:$dark;stroke-miterlimit:10}
+.cls-4,.cls-1-1{fill:$dark}

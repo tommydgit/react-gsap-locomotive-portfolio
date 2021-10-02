@@ -1,0 +1,41 @@
+#contact_section {
+  align-items: flex-end;
+  margin-top: 100px;
+  display: flex;
+  font-family: 'GT-Walsheim Bold', sans-serif;
+
+  .section-title{
+    margin-bottom: $text_margin;
+  }
+
+  .contact{
+    a{
+      font-size: 1.5em;
+      width: 100%;
+      padding-left: 0.2rem;
+      font-style: italic;
+    }
+  }
+
+  .footer{
+    margin: 20vh 0 5vh;
+    align-items: flex-end;
+    text-align: center;
+
+    .social{
+      ul{
+        li{
+          display: inline-block;
+          padding: 0 15px;
+          margin: 10px 0 13px;
+        }
+      }
+
+      a{
+        font-size: 1rem;
+        border: 0;
+        padding-bottom: .2em;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+a {
+  text-decoration: none;
+  color: $dark;
+  transition: $transition;
+
+  &:focus, &:active {
+    outline: none;
+    border: none;
+  }
+
+  &:hover{
+    color: $light;
+  }
+}
+
+.text-swap {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+
+  &:before, &:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  }
+
+  &:before {
+  background-color: var(--link-1);
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+  &:hover{
+    &:before{
+      transform-origin: 0% 50%;
+      transform: scaleX(1);
+    }
+
+    &:after {
+      transform: translate3d(0, 0, 0);
+    }
+
+    span {
+      transform: translate3d(-200%, 0, 0);
+    }
+  }
+
+  &:after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: var(--link-1);
+  }
+
+  span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+}
+
+.circle-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 var(--spacing, 0px);
+  transition: margin .25s;
+
+  svg {
+    width: 6em;
+    height: 4em;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-49%, 18px) translateZ(0);
+    fill: none;
+    stroke: var(--stroke, #1d1d1d);
+    stroke-linecap: round;
+    stroke-width: 1px;
+    stroke-dasharray: var(--offset, 69px) 278px;
+    stroke-dashoffset: 361px;
+    transition: stroke .25s ease var(--stroke-delay, 0s), stroke-dasharray .35s;
+  }
+
+  &:hover {
+    --stroke: #1d1d1d;
+    --stroke-delay: .1s;
+    --offset: 180px;
+    color: $dark;
+  }
+}
